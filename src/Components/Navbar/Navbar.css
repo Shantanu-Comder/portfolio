@@ -1,0 +1,124 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 136px;
+}
+
+.name{
+    width: 190px;
+    height: 53px;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 48px;
+    font-size: 16px;
+}
+
+.contact{
+    padding: 16px 32px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact:hover{
+    transform: scale(1.05);
+}
+
+.nav-list li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-list li:hover{
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.nav-list li img{
+    display: flex;
+    margin: auto;
+}
+
+.anchor{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-mob-close{
+    display: none;
+}
+
+.nav-mob-open{
+    display: none;
+}
+
+
+@media (max-width:768px) {
+    .navbar{
+        margin: 15px 37px;
+    }
+    
+    .contact{
+        display: none;
+    }
+
+    .nav-mob-open{
+        display: block;
+        right: 30px;
+    }
+
+    .nav-mob-open:hover{
+        cursor: pointer;
+    }
+    
+    .nav-mob-close{
+        display: block;
+        position: relative;
+        top: 22px;
+        left: 217px;
+        width: 22px;
+    }
+    
+    .nav-mob-close:hover{
+        cursor: pointer;
+    }
+
+    .nav-list{
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 22px;
+        background-color: rgb(30, 28, 28);
+        width: 262px;
+        height: 100%;
+        z-index: 2; 
+        transition: right 0.5s;
+        right: -262px;
+    }
+
+    .nav-list li{
+        font-size: 22px;
+        padding-left: 75px;
+        flex-direction: row;
+        gap: 15px;
+        background: -webkit-linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

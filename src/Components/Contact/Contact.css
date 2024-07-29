@@ -1,0 +1,171 @@
+.ctitle{
+    position: relative;
+}
+
+.ctitle h1{
+    padding: 0px 24px;
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.csections{
+    display: flex;
+    gap: 120px;
+}
+
+.cleft{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cleft h1{
+    font-size: 64px;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cleft p{
+    max-width: 440px;
+    color: white;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: white;
+    font-size: 18px;
+}
+
+.detail{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.detail-link{
+    color: white;
+    text-decoration: none;
+}
+
+.detail-link:hover{
+    text-decoration: underline;
+}
+
+.cright{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
+.cright label{
+    color: #D8D8D8;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.cright input{
+    border: none;
+    width: 560px;
+    height: 65px;
+    padding-left: 16px;
+    border-radius: 3px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: Outfit;
+    font-size: 16px;
+}
+
+.cright textarea{
+    width: 536px;
+    border: none;
+    padding: 20px;
+    border-radius: 3px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: Outfit;
+    font-size: 16px;
+}
+
+button{
+    border: none;
+    color: white;
+    border-radius: 40px;
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+    font-size: 17px;
+    padding: 16px 48px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+@media (max-width:768px) {
+    .ccontact{
+        gap: 37px;
+        margin: 37px 53px;
+        align-items: start;
+    }
+
+    .ctitle h1{
+        padding: 0;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .ctitle img{
+        width: 97px;
+        margin-right: -15px;
+    }
+
+    .csections{
+        flex-direction: column;
+    }
+
+    .cleft h1{
+        font-size: 54px;
+    }
+
+    .cleft p{
+        font-size: 18px;
+    }
+
+    .detail{
+        gap: 15px;
+    }
+
+    .detail img{
+        width: 19px;
+    }
+
+    .cright label{
+        font-size: 20px;
+    }
+
+    .cright input{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .cright textarea{
+        width: 95%;
+        font-size: 20px;
+    }
+
+    .csubmit{
+        font-size: 20px;
+        padding: 11px 37px;
+    }
+}

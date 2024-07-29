@@ -1,0 +1,96 @@
+.ctitle{
+    position: relative;
+}
+
+.ctitle h1{
+    padding: 0px 24px;
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 48px;
+    border-radius: 8px;
+    border: 2px solid white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.format h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.format h2{
+    font-size: 31px;
+    font-weight: 800;
+}
+
+.format p{
+    color: #d4d4d4;
+    font-size: 19px;
+    line-height: 32px;
+    max-width: 300px;
+}
+
+.more{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.format:hover{
+    border: 2px solid #ff00ff;
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.format:hover .sname{
+    color: white;
+}
+
+
+@media (max-width:768px) {
+    .certificate{
+        align-items: start;
+        gap: 53px;
+        margin: 15px 53px;
+    }
+
+    .ctitle h1{
+        padding: 0;
+        font-size: 37px;
+    }
+
+    .format{
+        gap: 15px;
+        padding: 24px;
+    }
+
+    .format h2{
+        font-size: 28px;
+    }
+
+    .format p{
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 225px;
+    }
+
+    .more img{
+        width: 15px;
+    }
+}

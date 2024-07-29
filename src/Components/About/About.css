@@ -1,0 +1,183 @@
+.common{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    margin: 64px 136px;
+}
+
+.title{
+    position: relative;
+}
+
+.title h1{
+    padding: 0px 24px;
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.headings{
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.limage{
+    width: 365px;
+    border-radius: 10px;
+}
+
+.sections{
+    display: flex;
+    gap: 64px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.para{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.para p{
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+};
+
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    line-height: 28px;
+}
+
+.skill{
+    display: flex;
+    gap: 40px;
+    padding-top: 11px;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.skill p{
+    min-width: 120px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.skill hr{
+    outline: none;
+    border: none;
+    width: 50%;
+    height: 7px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+}
+
+.achievements{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 64px;
+}
+
+.achievement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: 0.5s;
+}
+
+.achievement h1{
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.achievement p{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.skill:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.achievement:hover{
+    transform: scale(1.12);
+    transition: 0.5s;
+}
+
+
+@media (max-width:768px) {
+    .about{
+        gap: 60px;
+        margin: 37px 53px;
+        align-items: start;
+    }
+
+    .title h1{
+        font-size: 50px;
+        padding: 0;
+    }
+
+    .sections{
+        flex-direction: column;
+    }
+
+    .left{
+        display: none;
+    }
+
+    .para{
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .skill{
+        gap: 15px;
+        align-items: center;
+    }
+
+    .skill p{
+        font-size: 20px;
+    }
+
+    .skill hr{
+        height: 6px;
+    }
+
+    .achievements{
+        justify-content: space-between;
+    }
+
+    .achievement{
+        gap: 8px;
+    }
+
+    .achievement h1{
+        font-size: 34px;
+        font-weight: 700;
+    }
+
+    .achievement p{
+        text-align: center;
+    }
+}
