@@ -20,7 +20,7 @@ const About = () => {
         <div className="right">
 
             <div className="para">
-                <p>Hello, My name is Shantanu Bala, currently residing in Delhi. I recently graduated with a B.Tech degree in Information Technology from Inderprastha Engineering College with a CGPA of 6.5+. I Have done my schooling from Vanasthali Public School with 90% in 12th and 83.4% in 10th.</p>
+                <p>Hello, My name is Shantanu Bala, currently residing in Delhi. I recently graduated with a B.Tech degree in Information Technology from Inderprastha Engineering College with a CGPA of 6.7+. I Have done my schooling from Vanasthali Public School with 90% in 12th and 83.4% in 10th.</p>
                 <p>My passion lies in full stack web development. I have achieved certifications in Full Stack Web Development from Udemy and JavaScript from HackerRank and Great Learning, which have empowered me to develop comprehensive web applications independently.</p>
                 <p>Apart from these, I have some side hobbies as well. In my free time, I prioritize fitness through jogging and yoga, and I also enjoy cooking with my mother. These activities help me maintain a balanced and healthy lifestyle.</p>
             </div>
