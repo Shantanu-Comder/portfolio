@@ -1,91 +1,204 @@
-.ptitle{
+/* ===== BASE STYLES (Mobile-first, below 480px) ===== */
+.ptitle {
     position: relative;
 }
 
-.ptitle h1{
-    padding: 0px 24px;
-    font-size: 64px;
+.ptitle h1 {
+    padding: 0;
+    font-size: 28px;
     font-weight: 600;
 }
 
-.pcontainer{
+.pcontainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
 }
 
-.pcontainer img{
+.pcontainer img {
     box-sizing: border-box;
-    width: 475px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
     transition: 0.3s;
     cursor: pointer;
-    border-radius: 10px;
-    
+    border-radius: 8px;
+    border: 3px solid transparent;
 }
 
-.pcontainer img:hover{
-    transform: scale(1.10);
-    border-radius: 10px;
-    border: 5px solid transparent;
-    transition: 0.3s;
+.pcontainer img:hover {
+    transform: scale(1.03);
+    border-radius: 8px;
+    border: 3px solid transparent;
     border-top-color: rgba(158,148,233,1);
     border-left-color: rgba(158,148,233,1);
     border-bottom-color: rgba(224,109,122,0.8128501400560224);
     border-right-color: rgba(224,109,122,0.8128501400560224);
-    
+    transition: 0.3s;
 }
 
-.showmore{
+.showmore {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     border-radius: 40px;
     border: 2px solid white;
-    padding: 24px 48px;
-    font-size: 17px;
+    padding: 14px 28px;
+    font-size: 14px;
     font-weight: 500;
-    margin-bottom: 64px;
-    transition: 0.6s;
+    margin-bottom: 32px;
+    transition: 0.4s;
     cursor: pointer;
 }
 
-.showmore:hover{
-    gap: 24px;
-    transition: 0.6s;
+.showmore img {
+    width: 14px;
+    transition: 0.4s;
 }
 
+.showmore:hover {
+    gap: 16px;
+    transition: 0.4s;
+}
 
-@media (max-width:768px) {
-    .project{
-        gap: 37px;
-        margin: 37px 53px;
-        align-items: start;
+/* ===== MOBILE (min-width: 480px) ===== */
+@media (min-width: 480px) {
+    .ptitle h1 {
+        font-size: 34px;
     }
 
-    .ptitle h1{
-        padding: 0;
-        font-size: 40px;
-        font-weight: 600;
+    .pcontainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    .ptitle img{
-        width: 98px;
-        margin-right: -15px;
+    .pcontainer img {
+        border-radius: 10px;
     }
 
-    .pcontainer{
+    .pcontainer img:hover {
+        transform: scale(1.05);
+        border-radius: 10px;
+    }
+
+    .showmore {
+        gap: 10px;
+        padding: 16px 32px;
+        font-size: 15px;
+        margin-bottom: 36px;
+    }
+
+    .showmore img {
+        width: 15px;
+    }
+
+    .showmore:hover {
+        gap: 18px;
+    }
+}
+
+/* ===== TABLET (min-width: 768px) ===== */
+@media (min-width: 768px) {
+    .ptitle h1 {
+        font-size: 44px;
+        padding: 0 16px;
+    }
+
+    .pcontainer {
         gap: 24px;
     }
 
-    .pcontainer img{
-        width: 317px;
-        height: 200px;
+    .pcontainer img:hover {
+        transform: scale(1.07);
     }
 
-    .showmore{
-        padding: 15px 30px;
-        font-size: 18px;
-        margin: 37px auto;
-        cursor: pointer;
+    .showmore {
+        gap: 10px;
+        padding: 18px 38px;
+        font-size: 16px;
+        margin-bottom: 48px;
+    }
+
+    .showmore img {
+        width: 16px;
+    }
+
+    .showmore:hover {
+        gap: 20px;
+    }
+}
+
+/* ===== LAPTOP (min-width: 1024px) ===== */
+@media (min-width: 1024px) {
+    .ptitle h1 {
+        font-size: 54px;
+        padding: 0 20px;
+    }
+
+    .pcontainer {
+        gap: 28px;
+    }
+
+    .pcontainer img {
+        border: 4px solid transparent;
+    }
+
+    .pcontainer img:hover {
+        transform: scale(1.08);
+        border: 4px solid transparent;
+        border-top-color: rgba(158,148,233,1);
+        border-left-color: rgba(158,148,233,1);
+        border-bottom-color: rgba(224,109,122,0.8128501400560224);
+        border-right-color: rgba(224,109,122,0.8128501400560224);
+    }
+
+    .showmore {
+        gap: 11px;
+        padding: 20px 42px;
+        font-size: 16px;
+        margin-bottom: 56px;
+    }
+
+    .showmore:hover {
+        gap: 22px;
+    }
+}
+
+/* ===== DESKTOP (min-width: 1280px) ===== */
+@media (min-width: 1280px) {
+    .ptitle h1 {
+        font-size: 64px;
+        padding: 0 24px;
+    }
+
+    .pcontainer {
+        gap: 32px;
+    }
+
+    .pcontainer img {
+        border: 5px solid transparent;
+    }
+
+    .pcontainer img:hover {
+        transform: scale(1.10);
+        border: 5px solid transparent;
+        border-top-color: rgba(158,148,233,1);
+        border-left-color: rgba(158,148,233,1);
+        border-bottom-color: rgba(224,109,122,0.8128501400560224);
+        border-right-color: rgba(224,109,122,0.8128501400560224);
+    }
+
+    .showmore {
+        gap: 12px;
+        padding: 24px 48px;
+        font-size: 17px;
+        margin-bottom: 64px;
+    }
+
+    .showmore:hover {
+        gap: 24px;
     }
 }

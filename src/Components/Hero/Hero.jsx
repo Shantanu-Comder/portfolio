@@ -20,12 +20,24 @@ const Hero = () => {
       <div className="action">
 
         <div className="connect btw">
-          <AnchorLink className="anchor" offset={50} href="#contact">
+          <AnchorLink className="anchor" offset={50} href="#footer">
             Connect With Me
           </AnchorLink>
         </div>
 
-        <div className="resume btw">My Resume</div>
+        <div
+          className="resume btw"
+          onClick={() => {
+            const link = document.createElement('a');
+            link.href = '/resume.pdf';
+            link.download = 'resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+          }}
+        >
+          My Resume
+        </div>
         
       </div>
     </div>

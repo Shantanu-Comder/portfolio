@@ -1,26 +1,20 @@
-.ctitle{
-    position: relative;
-}
-
-.ctitle h1{
-    padding: 0px 24px;
-    font-size: 64px;
-    font-weight: 600;
-}
-
-.csections{
-    display: flex;
-    gap: 120px;
-}
-
-.cleft{
+/* ===== BASE STYLES (Mobile-first, below 480px) ===== */
+.csections {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
+    width: 100%;
 }
 
-.cleft h1{
-    font-size: 64px;
+.cleft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.cleft h1 {
+    font-size: 32px;
     font-weight: 700;
     background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
     background-clip: text;
@@ -28,144 +22,351 @@
     -webkit-text-fill-color: transparent;
 }
 
-.cleft p{
-    max-width: 440px;
+.cleft p {
+    max-width: 100%;
     color: white;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 22px;
 }
 
-.details{
+.details {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
 }
 
-.detail{
+.detail {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
 }
 
-.detail-link{
+.detail img {
+    width: 16px;
+    flex-shrink: 0;
+}
+
+.detail-link {
     color: white;
     text-decoration: none;
+    word-break: break-word;
 }
 
-.detail-link:hover{
+.detail-link:hover {
     text-decoration: underline;
 }
 
-.cright{
+.cright {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 24px;
+    align-items: stretch;
+    gap: 16px;
+    width: 100%;
 }
 
-.cright label{
+.cright label {
     color: #D8D8D8;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
 }
 
-.cright input{
+.cright input {
     border: none;
-    width: 560px;
-    height: 65px;
-    padding-left: 16px;
+    width: 100%;
+    height: 50px;
+    padding-left: 14px;
     border-radius: 3px;
     background: #32323c;
     color: #A0A0A0;
     font-family: Outfit;
-    font-size: 16px;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
-.cright textarea{
-    width: 536px;
+.cright textarea {
+    width: 100%;
     border: none;
-    padding: 20px;
+    padding: 14px;
     border-radius: 3px;
     background: #32323c;
     color: #A0A0A0;
     font-family: Outfit;
-    font-size: 16px;
+    font-size: 14px;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
-button{
+.csubmit {
     border: none;
     color: white;
     border-radius: 40px;
     background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
-    font-size: 17px;
-    padding: 16px 48px;
-    margin-bottom: 40px;
+    font-size: 14px;
+    padding: 12px 32px;
+    margin-top: 8px;
+    margin-bottom: 30px;
     cursor: pointer;
     transition: 0.3s;
+    align-self: flex-start;
 }
 
-button:hover{
-    transform: scale(1.1);
+.csubmit:hover {
+    transform: scale(1.05);
     transition: 0.3s;
 }
 
-
-@media (max-width:768px) {
-    .ccontact{
-        gap: 37px;
-        margin: 37px 53px;
-        align-items: start;
+/* ===== MOBILE (min-width: 480px) ===== */
+@media (min-width: 480px) {
+    .csections {
+        gap: 40px;
     }
 
-    .ctitle h1{
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
+    .cleft {
+        gap: 22px;
     }
 
-    .ctitle img{
-        width: 97px;
-        margin-right: -15px;
+    .cleft h1 {
+        font-size: 40px;
     }
 
-    .csections{
-        flex-direction: column;
+    .cleft p {
+        font-size: 15px;
+        line-height: 24px;
     }
 
-    .cleft h1{
-        font-size: 54px;
+    .details {
+        gap: 18px;
+        font-size: 15px;
     }
 
-    .cleft p{
-        font-size: 18px;
+    .detail {
+        gap: 12px;
     }
 
-    .detail{
+    .detail img {
+        width: 18px;
+    }
+
+    .cright {
+        gap: 18px;
+    }
+
+    .cright label {
+        font-size: 16px;
+    }
+
+    .cright input {
+        height: 55px;
+        padding-left: 15px;
+        font-size: 15px;
+    }
+
+    .cright textarea {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .csubmit {
+        font-size: 15px;
+        padding: 14px 38px;
+        margin-bottom: 35px;
+    }
+
+    .csubmit:hover {
+        transform: scale(1.08);
+    }
+}
+
+/* ===== TABLET (min-width: 768px) ===== */
+@media (min-width: 768px) {
+    .csections {
+        gap: 56px;
+    }
+
+    .cleft {
+        gap: 24px;
+    }
+
+    .cleft h1 {
+        font-size: 48px;
+    }
+
+    .cleft p {
+        font-size: 15px;
+        line-height: 26px;
+        max-width: 400px;
+    }
+
+    .details {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .detail {
+        gap: 14px;
+    }
+
+    .detail img {
+        width: 20px;
+    }
+
+    .cright {
+        gap: 20px;
+        max-width: 500px;
+    }
+
+    .cright label {
+        font-size: 16px;
+    }
+
+    .cright input {
+        height: 60px;
+        padding-left: 16px;
+        font-size: 16px;
+    }
+
+    .cright textarea {
+        padding: 18px;
+        font-size: 16px;
+    }
+
+    .csubmit {
+        font-size: 16px;
+        padding: 15px 42px;
+        margin-bottom: 38px;
+    }
+
+    .csubmit:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* ===== LAPTOP (min-width: 1024px) ===== */
+@media (min-width: 1024px) {
+    .csections {
+        flex-direction: row;
+        gap: 80px;
+        align-items: flex-start;
+    }
+
+    .cleft {
+        flex: 1;
+        max-width: 440px;
+    }
+
+    .cleft h1 {
+        font-size: 56px;
+    }
+
+    .cleft p {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 420px;
+    }
+
+    .details {
+        gap: 22px;
+        font-size: 17px;
+    }
+
+    .detail {
         gap: 15px;
     }
 
-    .detail img{
-        width: 19px;
+    .detail img {
+        width: 22px;
     }
 
-    .cright label{
-        font-size: 20px;
+    .cright {
+        flex: 1;
+        gap: 22px;
+        max-width: 480px;
     }
 
-    .cright input{
+    .cright label {
+        font-size: 17px;
+    }
+
+    .cright input {
+        height: 62px;
+        font-size: 16px;
+    }
+
+    .cright textarea {
+        padding: 19px;
+        font-size: 16px;
+    }
+
+    .csubmit {
+        font-size: 17px;
+        padding: 16px 45px;
+        margin-bottom: 40px;
+    }
+}
+
+/* ===== DESKTOP (min-width: 1280px) ===== */
+@media (min-width: 1280px) {
+    .csections {
+        gap: 120px;
+    }
+
+    .cleft {
+        gap: 24px;
+        max-width: 480px;
+    }
+
+    .cleft h1 {
+        font-size: 64px;
+    }
+
+    .cleft p {
+        max-width: 440px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .details {
+        gap: 24px;
+        font-size: 18px;
+    }
+
+    .detail {
+        gap: 16px;
+    }
+
+    .detail img {
+        width: 24px;
+    }
+
+    .cright {
+        gap: 24px;
+        max-width: 560px;
+    }
+
+    .cright label {
+        font-size: 17px;
+    }
+
+    .cright input {
         width: 100%;
-        font-size: 20px;
+        max-width: 560px;
+        height: 65px;
+        padding-left: 16px;
+        font-size: 16px;
     }
 
-    .cright textarea{
-        width: 95%;
-        font-size: 20px;
+    .cright textarea {
+        width: 100%;
+        max-width: 560px;
+        padding: 20px;
+        font-size: 16px;
     }
 
-    .csubmit{
-        font-size: 20px;
-        padding: 11px 37px;
+    .csubmit {
+        font-size: 17px;
+        padding: 16px 48px;
+        margin-bottom: 40px;
     }
 }

@@ -1,96 +1,262 @@
-.ctitle{
+/* ===== BASE STYLES (Mobile-first, below 480px) ===== */
+.ctitle {
     position: relative;
 }
 
-.ctitle h1{
-    padding: 0px 24px;
-    font-size: 64px;
+.ctitle h1 {
+    padding: 0;
+    font-size: 28px;
     font-weight: 600;
 }
 
-.format{
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.format {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 16px;
-    padding: 48px;
+    gap: 12px;
+    padding: 20px;
     border-radius: 8px;
     border: 2px solid white;
     transition: 0.4s;
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-bottom: 64px;
-}
-
-.format h3{
-    font-size: 22px;
+.format h3 {
+    font-size: 16px;
     font-weight: 600;
 }
 
-.format h2{
-    font-size: 31px;
+.format h2 {
+    font-size: 20px;
     font-weight: 800;
 }
 
-.format p{
+.format p {
     color: #d4d4d4;
-    font-size: 19px;
-    line-height: 32px;
-    max-width: 300px;
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
 }
 
-.more{
+.more {
     display: flex;
-    gap: 16px;
+    gap: 10px;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 10px;
 }
 
-.format:hover{
+.more p {
+    font-size: 14px;
+}
+
+.more img {
+    width: 12px;
+}
+
+.format:hover {
     border: 2px solid #ff00ff;
     background: linear-gradient(90deg, rgba(158,148,233,1) 0%, rgba(224,109,122,0.8128501400560224) 100%);
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 0.4s;
 }
 
-.format:hover .sname{
+.format:hover .sname {
     color: white;
 }
 
-
-@media (max-width:768px) {
-    .certificate{
-        align-items: start;
-        gap: 53px;
-        margin: 15px 53px;
+/* ===== MOBILE (min-width: 480px) ===== */
+@media (min-width: 480px) {
+    .ctitle h1 {
+        font-size: 34px;
     }
 
-    .ctitle h1{
-        padding: 0;
-        font-size: 37px;
+    .container {
+        gap: 24px;
+        margin-bottom: 40px;
     }
 
-    .format{
-        gap: 15px;
+    .format {
+        gap: 14px;
         padding: 24px;
     }
 
-    .format h2{
+    .format h3 {
+        font-size: 18px;
+    }
+
+    .format h2 {
+        font-size: 24px;
+    }
+
+    .format p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .more {
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .more p {
+        font-size: 15px;
+    }
+
+    .more img {
+        width: 14px;
+    }
+}
+
+/* ===== TABLET (min-width: 768px) ===== */
+@media (min-width: 768px) {
+    .ctitle h1 {
+        font-size: 42px;
+        padding: 0 16px;
+    }
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+        margin-bottom: 48px;
+    }
+
+    .format {
+        gap: 14px;
+        padding: 32px;
+    }
+
+    .format h3 {
+        font-size: 20px;
+    }
+
+    .format h2 {
+        font-size: 26px;
+    }
+
+    .format p {
+        font-size: 16px;
+        line-height: 26px;
+        max-width: 280px;
+    }
+
+    .more {
+        gap: 14px;
+        margin-top: 14px;
+    }
+
+    .more p {
+        font-size: 16px;
+    }
+
+    .more img {
+        width: 15px;
+    }
+
+    .format:hover {
+        transform: scale(1.03);
+    }
+}
+
+/* ===== LAPTOP (min-width: 1024px) ===== */
+@media (min-width: 1024px) {
+    .ctitle h1 {
+        font-size: 54px;
+        padding: 0 20px;
+    }
+
+    .container {
+        gap: 30px;
+        margin-bottom: 56px;
+    }
+
+    .format {
+        gap: 15px;
+        padding: 40px;
+    }
+
+    .format h3 {
+        font-size: 21px;
+    }
+
+    .format h2 {
         font-size: 28px;
     }
 
-    .format p{
-        font-size: 18px;
-        line-height: 24px;
-        max-width: 225px;
+    .format p {
+        font-size: 17px;
+        line-height: 28px;
+        max-width: 290px;
     }
 
-    .more img{
-        width: 15px;
+    .more {
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .more p {
+        font-size: 17px;
+    }
+
+    .format:hover {
+        transform: scale(1.04);
+    }
+}
+
+/* ===== DESKTOP (min-width: 1280px) ===== */
+@media (min-width: 1280px) {
+    .ctitle h1 {
+        font-size: 64px;
+        padding: 0 24px;
+    }
+
+    .container {
+        gap: 32px;
+        margin-bottom: 64px;
+    }
+
+    .format {
+        gap: 16px;
+        padding: 48px;
+    }
+
+    .format h3 {
+        font-size: 22px;
+    }
+
+    .format h2 {
+        font-size: 31px;
+    }
+
+    .format p {
+        font-size: 19px;
+        line-height: 32px;
+        max-width: 300px;
+    }
+
+    .more {
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .more p {
+        font-size: 19px;
+    }
+
+    .more img {
+        width: 16px;
+    }
+
+    .format:hover {
+        transform: scale(1.05);
     }
 }
