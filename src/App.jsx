@@ -12,13 +12,6 @@ let alertShown = false;
 
 const App = () => {
 
-  useEffect(() => {
-    if (!alertShown) {
-      alert('Sorry for the inconvenience, but this website is not completely  responsive for the  smaller screens yet. I am working on it.');
-      alertShown = true;
-    }
-  }, []);
-
   return (
     <div>
       <Navbar/>
