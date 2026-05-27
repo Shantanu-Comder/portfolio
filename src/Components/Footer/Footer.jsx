@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="tleft">
           <img className="name" src={logo} alt="" />
           <p>
-            Possess excellent communication and teamwork skills, with a strong
+            Possesses excellent communication and teamwork skills, with a strong
             drive to achieve new heights and continuously grow professionally.
           </p>
         </div>
