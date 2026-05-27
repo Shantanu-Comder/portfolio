@@ -1,6 +1,5 @@
 import React from 'react'
 import './About.css'
-import profile_img from '../../assets/about_profile.jpg';
 
 
 const About = () => {
@@ -12,10 +11,6 @@ const About = () => {
       </div>
 
       <div className="sections">
-
-        <div className="left">
-            <img className='limage' src={profile_img} alt="" />
-        </div>
 
         <div className="right">
 

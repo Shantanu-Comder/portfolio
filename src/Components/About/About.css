@@ -26,9 +26,7 @@
 }
 
 .limage {
-    width: 100%;
-    max-width: 280px;
-    border-radius: 10px;
+    display: none;
 }
 
 .sections {
@@ -47,6 +45,8 @@
     flex-direction: column;
     gap: 32px;
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .para {
@@ -155,7 +155,7 @@
     }
 
     .limage {
-        max-width: 300px;
+        display: none;
     }
 
     .sections {
@@ -164,6 +164,7 @@
 
     .right {
         gap: 40px;
+        max-width: 850px;
     }
 
     .para {
@@ -224,7 +225,7 @@
     }
 
     .limage {
-        max-width: 320px;
+        display: none;
     }
 
     .sections {
@@ -232,11 +233,12 @@
     }
 
     .left {
-        display: block;
+        display: none;
     }
 
     .right {
         gap: 48px;
+        max-width: 900px;
     }
 
     .para {
@@ -296,16 +298,18 @@
     }
 
     .limage {
-        max-width: 340px;
+        display: none;
     }
 
     .sections {
-        flex-direction: row;
+        flex-direction: column;
         gap: 56px;
+        align-items: center;
     }
 
     .right {
         gap: 56px;
+        max-width: 950px;
     }
 
     .para {
@@ -359,8 +363,7 @@
     }
 
     .limage {
-        width: 365px;
-        max-width: 365px;
+        display: none;
     }
 
     .sections {
@@ -369,6 +372,7 @@
 
     .right {
         gap: 64px;
+        max-width: 1000px;
     }
 
     .para {
