@@ -1,22 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Contact.css";
 import mail_icon from "../../assets/mail_icon.svg";
 import call_icon from "../../assets/call_icon.svg";
 import location_icon from "../../assets/location_icon.svg";
+import { Button as StatefulButton } from "@/Components/ui/stateful-button";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
+  const formRef = useRef(null);
   const email = "shantanubala003@gmail.com";
   const number = "+918595626637";
   const address = "Delhi, India";
   const googleMapsLink = `https://www.google.com/maps/dir//delhi`;
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async () => {
+    const form = formRef.current;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
     setResult("Sending....");
 
-    const formData = new FormData(event.target);
-
+    const formData = new FormData(form);
     formData.append("access_key", "147932fa-27cb-4d18-be81-04283570df13");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -28,8 +34,7 @@ const Contact = () => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
-      alert(data.message);
-      event.target.reset();
+      form.reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -89,7 +94,7 @@ const Contact = () => {
           </div>
 
         </div>
-        <form onSubmit={onSubmit} className="cright">
+        <form ref={formRef} className="cright">
           <label htmlFor="">Your Name</label>
           <input
             type="text"
@@ -111,9 +116,13 @@ const Contact = () => {
             placeholder="Enter Your Message"
             required
           ></textarea>
-          <button type="submit" className="csubmit">
+          <StatefulButton
+            type="button"
+            onClick={handleSubmit}
+            className="csubmit !bg-[linear-gradient(90deg,rgba(158,148,233,1)_0%,rgba(224,109,122,0.81)_100%)] hover:!ring-[rgba(158,148,233,0.5)]"
+          >
             Submit Now
-          </button>
+          </StatefulButton>
         </form>
       </div>
     </div>

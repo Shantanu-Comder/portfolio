@@ -11,12 +11,36 @@
     box-sizing: border-box;
 }
 
-body{
-    max-height: 100vh;
+html {
     background: #161513;
+}
+
+body{
+    background: transparent;
     color: white;
     font-family: 'outfit';
     overflow-x: hidden;
+}
+
+/* Aurora Background Animation */
+@keyframes aurora {
+    0% {
+        background-position: 50% 50%, 50% 50%;
+    }
+    50% {
+        background-position: 350% 50%, 350% 50%;
+    }
+    100% {
+        background-position: 50% 50%, 50% 50%;
+    }
+}
+
+.animate-aurora {
+    animation: aurora 120s ease-in-out infinite;
+}
+
+.after\:animate-aurora::after {
+    animation: aurora 45s ease-in-out infinite;
 }
 
 img{

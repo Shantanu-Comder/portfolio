@@ -110,6 +110,8 @@
     cursor: pointer;
     transition: 0.3s;
     align-self: center;
+    /* Override Stateful Button defaults */
+    min-width: auto !important;
 }
 
 .csubmit:hover {
